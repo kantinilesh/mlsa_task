@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        skin: {
+                            light: '#FFE4B5',
+                            dark: '#DEB887',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body class="font-montserrat bg-skin-light text-gray-800">
+    <header class="bg-skin-dark bg-opacity-80 sticky top-0 z-50 backdrop-filter backdrop-blur-lg">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#home" class="hover:text-blue-600 transition duration-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-600 transition duration-300">About Us</a></li>
+                    <li><a href="#academics" class="hover:text-blue-600 transition duration-300">Academics</a></li>
+                    <li><a href="#gallery" class="hover:text-blue-600 transition duration-300">Gallery</a></li>
+                    <li><a href="#contact" class="hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                </ul>
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-skin-light min-h-screen">
+        <section id="home" class="py-20 mt-16 relative">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow text-gray-800">Welcome to Delhi Public School</h1>
+                <p class="text-xl mb-8 text-gray-700">Nurturing minds, inspiring futures</p>
+                <div id="announcements" class="mt-12">
+                    <h2 class="text-3xl font-semibold mb-6 text-gray-800">Announcements</h2>
+                    <p class="text-3xl font-semibold mb-6 text-gray-800">At DPS, we believe in keeping our community informed and engaged. Our regular announcements provide essential updates on school events, programs, and important dates. Here’s what’s coming up: Summer Camp Registration: DPSB is excited to offer a dynamic summer camp program, filled with activities that promote both learning and fun. Registration is open, and we encourage parents to sign up their children before the May 15 deadline. Parent-Teacher Conference: Our bi-annual Parent-Teacher Conference will be held on June 1. This event offers a valuable opportunity for parents to meet with teachers, discuss their childs progress, and collaborate on their educational journey. Annual Sports Day: On July 10,  DPSB will host its much-anticipated Annual Sports Day. Students will participate in various sports events, fostering team spirit, discipline, and a healthy competitive attitude. All parents and guardians are invited to join us for a day of fun and celebration. These announcements are a glimpse of the vibrant life at DPSB, where we continuously strive to create a supportive and enriching environment for our students. Stay tuned for more updates!</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 relative">
+
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Summer Camp Registration</h3>
+                            <p class="text-gray-600 mb-2">Date: May 15, 2023</p>
+                            <p class="text-gray-700">Register now for our exciting summer camp program!</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 relative">
+
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Parent-Teacher Conference</h3>
+                            <p class="text-gray-600 mb-2">Date: June 1, 2023</p>
+                            <p class="text-gray-700">Join us for our bi-annual parent-teacher conference.</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration- relative">
+
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Annual Sports Day</h3>
+                            <p class="text-gray-600 mb-2">Date: July 10, 2023</p>
+                            <p class="text-gray-700">Get ready for a day of fun and sportsmanship!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-semibold mb-8 text-shadow">About Us</h2>
+                <h5 class="text-xl mb-12">Delhi Public School is committed to providing a nurturing environment where students can thrive academically and personally.</h5>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="text-center">
+                        <img src="https://wallpapers.com/images/high/rick-astley-57i9eejnma2lkv4m.webp" alt="Principal" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold mb-2">Dr. Rick Astley</h3>
+                        <p>Principal</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://wallpapers.com/images/high/elegant-retro-inspired-portrait-ighev95hpytirosx.webp" alt="Vice Principal" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold mb-2">Ms Lana Del Rey</h3>
+                        <p>Vice Principal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="academics" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-semibold mb-8 text-shadow">Academics</h2>
+                <h3 class="text-2xl font-semibold mb-4">Class 10A Timetable</h3>
+                <div class="overflow-x-auto mb-12">
+                    <table class="w-full bg-white rounded-lg shadow-md">
+                        <thead>
+                            <tr class="bg-skin-dark text-white">
+                                <th class="p-3">Time</th>
+                                <th class="p-3">Monday</th>
+                                <th class="p-3">Tuesday</th>
+                                <th class="p-3">Wednesday</th>
+                                <th class="p-3">Thursday</th>
+                                <th class="p-3">Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-3 border">8:00 - 9:00</td>
+                                <td class="p-3 border">Math</td>
+                                <td class="p-3 border">Science</td>
+                                <td class="p-3 border">English</td>
+                                <td class="p-3 border">History</td>
+                                <td class="p-3 border">Geography</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border">9:00 - 10:00</td>
+                                <td class="p-3 border">Science</td>
+                                <td class="p-3 border">English</td>
+                                <td class="p-3 border">Math</td>
+                                <td class="p-3 border">Geography</td>
+                                <td class="p-3 border">History</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border">10:00 - 11:00</td>
+                                <td class="p-3 border">English</td>
+                                <td class="p-3 border">Math</td>
+                                <td class="p-3 border">Science</td>
+                                <td class="p-3 border">Art</td>
+                                <td class="p-3 border">Physical Education</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Study Materials</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">Math Formulas (PDF)</a></li>
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">Science Lab Manual (PDF)</a></li>
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">English Grammar Guide (PDF)</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-semibold mb-8 text-shadow">Gallery</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <img src="Unknown.jpeg" alt="School Event 1" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <img src="Unknown1.jpeg" alt="School Event 2" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <img src="Unknown2.jpeg" alt="School Event 3" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.youtube.com/embed/eJGcBSfBQMw?si=QFlxX0nV0Dybr8UU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full rounded-lg shadow-md"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-semibold mb-8 text-shadow">Contact Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <form id="contact-form" class="space-y-4">
+                        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <textarea name="message" placeholder="Your Message" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 h-32"></textarea>
+                        <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Send Message</button>
+                    </form>
+                    <div>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">Contact Information</h3>
+                            <p>Address: 123 Sunshine Street, Cityville, State 12345</p>
+                            <p>Phone: (123) 456-7890</p>
+                            <p>Email: info@sunshineacademy.edu</p>
+                        </div>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d908.7545680864755!2d88.3811665294525!3d22.513132962256115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02713585aa2bdf%3A0xee6a6bdee30da343!2sDelhi%20Public%20School%20Ruby%20Park%20Kolkata%20Junior%20School!5e0!3m2!1sen!2sin!4v1727618521461!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-skin-dark text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2023 Sunshine Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="newsletter-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h3 class="text-2xl font-semibold mb-4">Subscribe to Our Newsletter</h3>
+            <p class="mb-4">Stay updated with the latest news and events!</p>
+            <form id="newsletter-form" class="space-y-4">
+                <input type="email" name="newsletter-email" placeholder="Your Email" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 w-full">Subscribe</button>
+            </form>
+            <button id="close-popup" class="mt-4 text-gray-600 hover:text-gray-800">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
